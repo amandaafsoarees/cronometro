@@ -1,0 +1,85 @@
+:root {
+    --background: #fff0f5;    /* Rosa Lavanda bem clarinho para o fundo */
+    --surface: #ffffff;       /* Branco puro para destacar a caixinha */
+    --text: #4a1525;          /* Vinho/Rosa escuro para os textos e números */
+    --primary: #ff69b4;       /* Rosa Choque vibrante para o botão Iniciar */
+    --danger: #ffb6c1;        /* Rosa Bebê suave para o botão Resetar */
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    
+    /* centralização */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 2.5rem;
+}
+
+.stopwatch {
+    background-color: var(--surface);
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(74, 21, 37, 0.06);
+    text-align: center;
+}
+
+#display {
+    font-family: 'Faculty Glyphic', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    font-variant-numeric: tabular-nums;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px; /* espaçamento  */
+    justify-content: center;
+}
+
+#startStop {
+    background: var(--primary);
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#startStop:hover {
+    background: #ff4da6; }
+
+#reset {
+    background: var(--danger);
+    color: var(--text);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#reset:hover {
+    background: #ffa1b0; }
+
+.timerwatch {
+    background-color: var(--surface);
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(74, 21, 37, 0.06);
+    text-align: center;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="index.html">Home</a>
+    <div class="timerwatch"> 
+        <div id="display">
+            <input type="number" id="inputMinutos" min="0" max="59" value="05">
+            <input type="number" id="inputSegundos" min="0" max="59" value="00">
+        </div>
+        <div class="buttons">
+            <button id="startStop" onclick="iniciarPararTimer()">Iniciar</button>
+            <button id="reset" onclick="resetTimer()">Resetar</button>
+        </div>
+    </div>
+</body>
+</html>
