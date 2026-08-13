@@ -7,15 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="index.html">Home</a>
+   
+     <script src="script.js" defer></script>
+      <!-- MENU LATERAL -->
+    <aside class="sidebar">
+        <a href="timer.html" class="item">
+            <img src="./imgs/timer.png" class="icone" alt="Temporizador">
+        </a>
+
+        <a href="index.html" class="item">
+            <img src="./imgs/cronometro.png" class="icone" alt="Cronômetro">
+        </a>
+    </aside>
+<div class="centralizacao">
+     <h2>Temporizador</h2>
     <div class="timerwatch"> 
         <div id="display">
-            <input type="number" id="inputMinutos" min="0" max="59" value="05">
-            <input type="number" id="inputSegundos" min="0" max="59" value="00">
+            <input type="number" id="inputHoras" min="0" max="99" value="00" oninput="if(this.value.length > 2) this.value = this.value.slice(0,2);">:
+            <input type="number" id="inputMinutos" min="0" max="59" value="00" oninput="if(this.value.length > 2) this.value = this.value.slice(0,2);">:
+            <input type="number" id="inputSegundos" min="0" max="59" value="00" oninput="if(this.value.length > 2) this.value = this.value.slice(0,2);">
         </div>
         <div class="buttons">
-            <button id="startStop" onclick="iniciarPararTimer()">Iniciar</button>
-            <button id="reset" onclick="resetTimer()">Resetar</button>
+            <button id="startStopTimer" onclick="iniciarPararTimer()">Iniciar</button>
+            <button id="resetTimer" onclick="resetTimer()">Resetar</button>
         </div>
     </div>
 </body>

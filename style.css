@@ -1,54 +1,125 @@
 :root {
-    --background: #fff0f5;    /* Rosa Lavanda bem clarinho para o fundo */
-    --surface: #ffffff;       /* Branco puro para destacar a caixinha */
-    --text: #4a1525;          /* Vinho/Rosa escuro para os textos e números */
-    --primary: #ff69b4;       /* Rosa Choque vibrante para o botão Iniciar */
-    --danger: #ffb6c1;        /* Rosa Bebê suave para o botão Resetar */
+    --background: #fff0f5;    /* rosa bem clarinho para o fundo */
+    --surface: #ffffff;       /* branco puro para destacar a caixinha */
+    --text: #4a1525;          /* vinho/rosa escuro para os textos e números */
+    --primary: #ff69b4;       /* rosa choque vibrante para o botão iniciar */
+    --danger: #ffb6c1;        /* rosa Bebê suave para o botão resetar */
 }
 
-body {
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
     background-color: var(--background);
     color: var(--text);
     font-family: 'Montserrat', sans-serif;
-    
-    /* centralização */
+}
+
+body {
+    display: flex;
+    flex-direction: row;    
+    align-items: stretch;     
+}
+
+.sidebar {
+    width: 120px;
+    background-color: var(--surface);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0 3px 3px 0;
+    box-shadow: 2px 0 12px rgba(74, 21, 37, 0.04);
+    box-sizing: border-box;
+    flex-shrink: 0;        
+}
+
+.item {
+    width: 120px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+.icone {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    object-fit: contain;
+    margin-bottom: 7px;
+}
+
+/* --- ÁREA DO CONTEÚDO PRINCIPAL --- */
+.centralizacao {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
+    flex-grow: 1;            
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-h1 {
+h1, h2 {
     margin-top: 0;
     margin-bottom: 24px;
     font-size: 2.5rem;
+    text-align: center;
 }
 
-.stopwatch {
+.stopwatch, .timerwatch {
     background-color: var(--surface);
     padding: 30px 40px;
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(74, 21, 37, 0.06);
     text-align: center;
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
 }
 
 #display {
-    font-family: 'Faculty Glyphic', sans-serif;
-    font-size: 2.5rem;
+    font-family: 'Montserrat', monospace; 
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 24px;
-    font-variant-numeric: tabular-nums;
+    font-variant-numeric: tabular-nums; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--text);
+}
+
+#display input {
+    font-family: 'Montserrat', monospace;
+    font-size: 3rem;
+    font-weight: 700;
+    width: 70px;
+    text-align: center;
+    border: none;             
+    background: transparent;  
+    color: var(--text);     
+    outline: none;            
+    font-variant-numeric: tabular-nums; 
+}
+
+#display input::-webkit-outer-spin-button,
+#display input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .buttons {
     display: flex;
-    gap: 12px; /* espaçamento  */
+    gap: 12px; 
     justify-content: center;
 }
 
-#startStop {
+#startStop, #startStopTimer {
     background: var(--primary);
     color: #ffffff;
     padding: 12px 24px;
@@ -59,10 +130,11 @@ h1 {
     transition: background 0.2s ease;
 }
 
-#startStop:hover {
-    background: #ff4da6; }
+#startStop:hover, #startStopTimer:hover {
+    background: #ff4da6; 
+}
 
-#reset {
+#reset, #resetTimer {
     background: var(--danger);
     color: var(--text);
     padding: 12px 24px;
@@ -73,13 +145,52 @@ h1 {
     transition: background 0.2s ease;
 }
 
-#reset:hover {
-    background: #ffa1b0; }
+#reset:hover, #resetTimer:hover {
+    background: #ffa1b0; 
+}
 
-.timerwatch {
-    background-color: var(--surface);
-    padding: 30px 40px;
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(74, 21, 37, 0.06);
-    text-align: center;
+
+@media screen and (max-width: 600px) {
+    .sidebar {
+        width: 75px;       
+    }
+
+    .item {
+        width: 75px;
+        height: 75px;
+    }
+
+    .icone {
+        width: 40px;
+        height: 40px;
+    }
+
+    .centralizacao {
+        padding: 10px;
+    }
+
+    .stopwatch, .timerwatch {
+        padding: 25px 15px;
+        max-width: 275px;   
+    }
+
+    h1, h2 {
+        font-size: 1.6rem;
+        margin-bottom: 16px;
+    }
+
+    #display {
+        font-size: 1.75rem; 
+        gap: 3px;
+    }
+    
+    #display input {
+        font-size: 1.75rem;
+        width: 42px;        
+    }
+
+    #startStop, #startStopTimer, #reset, #resetTimer {
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
 }

@@ -4,14 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cronometro</title>
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
 <body>
+
+    <!-- MENU LATERAL -->
+    <aside class="sidebar">
+        <a href="timer.html" class="item">
+            <img src="./imgs/timer.png" class="icone" alt="Temporizador">
+        </a>
+
+        <a href="index.html" class="item">
+            <img src="./imgs/cronometro.png" class="icone" alt="Cronômetro">
+        </a>
+    </aside>
  <script src="script.js" defer></script>
-<a link href="timer.html">Timer</a>
+<a link href="timer.html"></a> 
+<div class="centralizacao">
   <h1>Cronômetro</h1>
     <div class="stopwatch">
       <div id="display">00:00:00.000</div>
@@ -19,6 +30,7 @@
           <button id="startStop" onclick="iniciarParar()">Iniciar</button>
           <button id="reset" onclick="reset()">Resetar</button>
       </div>
+  </div>
   </div>
 </body>
 </html>
