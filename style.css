@@ -1,9 +1,9 @@
 :root {
-    --background: #fff0f5;    /* rosa bem clarinho para o fundo */
-    --surface: #ffffff;       /* branco puro para destacar a caixinha */
-    --text: #4a1525;          /* vinho/rosa escuro para os textos e números */
-    --primary: #ff69b4;       /* rosa choque vibrante para o botão iniciar */
-    --danger: #ffb6c1;        /* rosa Bebê suave para o botão resetar */
+    --background: #fff0f5;    
+    --surface: #ffffff;       
+    --text: #4a1525;          
+    --primary: #ff69b4;      
+    --danger: #ffb6c1;        
 }
 
 
@@ -52,7 +52,6 @@ body {
     margin-bottom: 7px;
 }
 
-/* --- ÁREA DO CONTEÚDO PRINCIPAL --- */
 .centralizacao {
     display: flex;
     flex-direction: column;
